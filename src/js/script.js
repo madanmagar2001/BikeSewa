@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
 const caqBtn = document.querySelector(".caq__close");
 overlay.addEventListener("click", function (e) {
   if (!e.target.className && e.target.localName === "a" || e.target.className === 'overlay' || e.target.closest('.caq__close')?.classList.value === 'caq__close') {
-    caqForm.classList.add("overlay__hidden");
+    overlay.remove()
   };
 });
 
