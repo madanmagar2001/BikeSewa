@@ -6,7 +6,7 @@ const caqForm = document.querySelector(".overlay__hidden");
 window.addEventListener("load", function () {
   setTimeout(function () {
     caqForm.classList.remove("overlay__hidden");
-  }, 1000);
+  }, 3000);
 });
 
 const caqBtn = document.querySelector(".caq__close");
