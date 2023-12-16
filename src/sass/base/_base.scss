@@ -1,0 +1,224 @@
+@use "../abstract/" as *;
+@use "../components/" as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-primary-light-1);
+}
+
+a {
+  color: var(--color-grey-dark-2);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.svg {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.scroll-up:hover {
+  bottom: 50px;
+  transition: 0.4s ease;
+}
+
+.scroll-up {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-grey-dark-2);
+  background-color: var(--color-red-dark);
+  color: var(--color-white);
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  font-weight: 800;
+  z-index: 99;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.4s ease;
+}
+
+// for multiple page link
+.sub-page {
+  height: 97vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include smalldevice;
+  @include responsive(desktop) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav {
+    height: 5.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__list {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 100%;
+      background-color: var(--color-grey-dark-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 3.2rem;
+      z-index: 99;
+      transition: 0.5s;
+      .nav__menu--close {
+        cursor: pointer;
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        width: 3.4rem;
+        height: 3.4rem;
+        fill: var(--color-white);
+      }
+      .nav__link {
+        color: var(--color-white);
+        font-size: 2.4rem;
+      }
+
+      @include responsive(l-tab) {
+        position: static;
+        height: auto;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        gap: 4rem;
+        transition: none;
+        .nav__link {
+          color: var(--color-grey-dark-2);
+          font-size: 1.6rem;
+        }
+        .nav__link:hover {
+          color: var(--color-red-light-2);
+        }
+      }
+    }
+
+    &__menu--close {
+      @include responsive(l-tab) {
+        display: none;
+      }
+    }
+    &__menu--show {
+      cursor: pointer;
+      display: block;
+      height: 3.4rem;
+      width: 3.4rem;
+
+      @include responsive(l-tab) {
+        display: none;
+      }
+    }
+
+    .logo a {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 500;
+      span {
+        color: var(--color-red-dark);
+      }
+    }
+  }
+}
+
+// caq
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.353);
+  z-index: 99;;
+
+  .caq__form {
+    margin-top: 10rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 8px 2px rgb(154, 154, 154);
+    width: 80%;
+    height: 20rem;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility .5s ease-in;
+    transition: opacity .5s ease-in;
+  
+    @include responsive(tab) {
+      width: 60%;
+      height: 40rem;
+    }
+    
+    .caq__close {
+      position: absolute;
+      top: .5rem;
+      right: .5rem;
+      height: 3.4rem;
+      width: 3.4rem;
+    }
+  
+    a {
+      @include submit__btn;
+      font-size: 1.4rem;
+  
+      @include responsive(tab) {
+        font-size: 2.4rem;
+      }
+    }
+  
+    a:not(:last-of-type) {
+      margin-right: 2rem;
+  
+      @include responsive(tab) {
+        margin-right: 5rem;
+      }
+    }
+  }
+  
+}
+
+
+.overlay__hidden {
+  opacity: 0;
+  visibility: hidden;
+}

@@ -1,0 +1,56 @@
+@use "../abstract/" as *;
+.info {
+  background-color: var(--color-primary-light-2);
+  background-image:url('../img/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include responsive(desktop) {
+    background-position: top;
+    background-size: 70%;
+  }
+  
+  &__content {
+    @include smalldevice;
+    
+    @include responsive(desktop) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    padding: 2.4rem 0;
+    margin-top: 9.6rem;
+    .info__title {
+      font-family: inherit;
+      color: var(--color-grey-dark-2);
+      margin-top: 1.2rem;
+      font-size: 1.8rem;
+      font-weight: 500;
+
+      @include responsive(tab) {
+        font-size: 2.8rem;
+      }
+    }
+    .info__sub-title {
+      font-family: inherit;
+      color: var(--color-grey-dark-1);
+      margin-top: 0.6rem; 
+      padding-right: 9rem;
+      text-align: left;
+
+      @include responsive(tab) {
+        font-size: 1.4rem;
+      }
+    }
+    .app--store {
+      margin-top: 0.6rem; 
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      img {
+        width: 20%;
+      }
+    }
+  }
+}

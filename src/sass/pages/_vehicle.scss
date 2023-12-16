@@ -1,0 +1,76 @@
+@use "../abstract" as *;
+@use "../components" as *;
+
+.vehicle__models {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  &__box {
+    width: 32rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.034);
+    cursor: pointer;
+    transition: .5s ease;
+
+    &__discr {
+      &__brand__model {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0.5rem;
+        text-align: center;
+
+        :nth-child(2) {
+          grid-row: 2;
+        }
+
+        :nth-child(odd) {
+          color: var(--color-grey-dark-1);
+          font-size: 1.6rem;
+        }
+
+        :nth-child(even) {
+          color: var(--color-grey-dark-2);
+          font-size: 1.8rem;
+        }
+      }
+
+      &__rate__price {
+        margin-top: 1.8rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0.5rem;
+        text-align: center;
+
+        :nth-child(2) {
+          grid-row: 2;
+        }
+
+        :nth-child(odd) {
+          color: var(--color-grey-dark-1);
+          font-size: 1.6rem;
+        }
+
+        :nth-child(even) {
+          color: var(--color-grey-dark-2);
+          font-size: 1.8rem;
+        }
+      }
+
+      input {
+        @include submit__btn;
+        font-size: 1.6rem;
+        width: 100%;
+        transition: 0.4s ease;
+      }
+
+      input:hover {
+        @include hover;
+      }
+    }
+  }
+  &__box:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+
+  }
+}

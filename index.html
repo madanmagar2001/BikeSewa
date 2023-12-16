@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This page is about renting a bike for cheap price"
+    />
+    <!-- css link -->
+    <!-- <link rel="stylesheet" href="src/css/style.css" /> -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- favicon link -->
+    <link rel="icon" type="image/x-icon" href="src/img/favicon.png" />
+    <!-- -- JS link -- -->
+    <script defer src="src/js/script.js"></script>
+    <title>BIKESEWA</title>
+  </head>
+  <body>
+    <div class="overlay overlay__hidden">
+      <div class="caq__form">
+        <svg class="caq__close">
+          <use href="src/img/sprite.svg#icon-cross"></use>
+        </svg>
+        <a href="#">Sign up</a>
+        <a href="#">Login</a>
+      </div>
+    </div>
+    
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">
+          <a href="#"> BIKE<span>SEWA</span></a>
+        </div>
+        <div class="nav__menu">
+          <ul class="nav__list nav--close">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="src/pages/about.html" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="src/pages/vehicle.html" class="nav__link">Vehicle Models</a>
+            </li>
+            <li class="nav__item">
+              <a href="src/pages/testimonial.html" class="nav__link">Testimonials</a>
+            </li>
+            <li class="nav__item">
+              <a href="src/pages/contact.html" class="nav__link">Contact</a>
+            </li>
+            <svg class="nav__menu--close">
+              <use href="src/img/sprite.svg#icon-cross"></use>
+            </svg>
+          </ul>
+        </div>
+        <svg class="nav__menu--show">
+          <use href="src/img/sprite.svg#icon-menu"></use>
+        </svg>
+      </nav>
+      <div class="header__hero">
+        <div class="hero__img">
+          <img src="src/img/crossfire_hj_250.png" alt="bike img" />
+        </div>
+        <div class="hero__content">
+          <h3 class="hero__title">PLAN YOUR TRIP</h3>
+          <h1 class="hero__sub-title">ROAM & <span>RIDE</span></h1>
+          <p class="hero__discription">
+            Your Ultimate Motorcycle Rental Experience.
+          </p>
+          <button class="hero__btn btn">
+            BOOK NOW
+            <svg class="book__btn">
+              <use href="src/img/sprite.svg#icon-checkmark-outline"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="scroll-up">&#8593;</div>
+
+    <section class="booking">
+      <div class="booking__content">
+        <h1 class="booking__title">Book a bike</h1>
+        <h3 class="booking__sub-title">
+          Book it online on our website and get <span>25% off</span> on your
+          first online booking
+        </h3>
+      </div>
+      <div class="booking__form">
+        <h2>Book it now</h2>
+        <form action="">
+          <label for="bike-type" id="bike-type-label">
+            <svg class="bike__icon svg">
+              <use xlink:href="src/img/sprite.svg#icon-motorcycle1"></use>
+            </svg>
+            <span>Select your bike type</span>
+          </label>
+          <select id="bike-type">
+            <option class="arrow">Select your bike</option>
+            <option value="Bajaj NS 200">Bajaj NS 200</option>
+            <option value="Crossfire RM 250">Crossfire RM 250</option>
+            <option value="Crossfire HJ 250">Crossfire RM 250</option>
+            <option value="Royal Enfield 350">Royal Enfield 350</option>
+            <option value="Hero Xpulse 200">Hero Xpulse 200</option>
+            <option value="Apache RTR 200">Apache RTR 200</option>
+          </select>
+
+          <label for="location" id="location-label">
+            <svg class="location__icon svg">
+              <use xlink:href="src/img/sprite.svg#icon-location-pin"></use>
+            </svg>
+            <span>Select pick up location</span>
+          </label>
+          <select id="location">
+            <option>Select pick up location</option>
+            <option value="Kathmandu">Kathmandu</option>
+            <option value="Pokhara">Pokhara</option>
+            <option value="Butwal">Butwal</option>
+            <option value="Bhairahawa">Bhairahwa</option>
+            <option value="Baglung">Baglung</option>
+          </select>
+
+          <label for="pick-up-date" id="pick-up-date-label">
+            <svg class="pick-up svg">
+              <use xlink:href="src/img/sprite.svg#icon-calendar"></use>
+            </svg>
+            <span>Pick-up-date</span>
+          </label>
+          <input type="date" id="pick-up-date" />
+
+          <label for="drop-off-date" id="drop-off-date-label">
+            <svg class="pick-up svg">
+              <use xlink:href="src/img/sprite.svg#icon-calendar"></use>
+            </svg>
+            <span>Drop-off-date</span>
+          </label>
+          <input type="date" id="drop-off-date" />
+
+          <input type="submit" value="SUBMIT" class="submit__btn" />
+        </form>
+      </div>
+    </section>
+
+    <section class="bikes">
+      <div class="bikes__content">
+        <h3 class="bikes__title">Bike Models</h3>
+        <h1 class="bikes__sub-title">Our rental bikes</h1>
+        <p class="bikes__discription">
+          choose from variety of our amazing bikes from off-road to on-road
+          bikes rent for your next adventure
+        </p>
+      </div>
+      <div class="bikes__models">
+        <div class="bikes__brand">
+          <ul class="bikes__brand__lists">
+            <li
+              class="bikes__brand__item bikes__brand__item--active"
+              data-bike="bajaj_ns_200"
+            >
+              Bajaj NS 200
+            </li>
+            <li class="bikes__brand__item" data-bike="crossfire_rm_250">
+              Crossfire RM 250
+            </li>
+            <li class="bikes__brand__item" data-bike="crossfire_hj_250">
+              Crossfie HJ 250
+            </li>
+            <li class="bikes__brand__item" data-bike="hero_xpulse_200">
+              Hero Xpulse 200
+            </li>
+            <li class="bikes__brand__item" data-bike="ktm_adventure_390">
+              Ktm Adventure 390
+            </li>
+            <li class="bikes__brand__item" data-bike="ktm_duke_390">
+              Ktm Duke 390
+            </li>
+          </ul>
+        </div>
+        <div class="bikes__img">
+          <div class="loader"></div>
+          <img src="src/img/bajaj_ns_200.png" alt="bike" />
+        </div>
+        <div class="bikes__features">
+          <h3 class="bikes__price"><span>$10 /</span> Rent par day</h3>
+          <ul class="bikes__features__lists">
+            <li class="bikes__features__col">
+              <span>Brand</span> <span>Bajaj</span>
+            </li>
+            <li class="bikes__features__col">
+              <span>Model</span> <span>Adventure 390</span>
+            </li>
+            <li class="bikes__features__col">
+              <span>Mileage</span> <span>40.36 Kmpl</span>
+            </li>
+            <li class="bikes__features__col">
+              <span>Displacement</span> <span>199cc</span>
+            </li>
+            <li class="bikes__features__col">
+              <span>Year</span> <span>2022</span>
+            </li>
+          </ul>
+          <input type="submit" value="RESERVE NOW" class="submit__btn" />
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="testimonials__content">
+        <h1 class="testimonials__title">Client's Testimonials</h1>
+        <h3 class="testimonials__sub-title">
+          What Our Customers Say About Their Rental Motorcycle Experience
+        </h3>
+      </div>
+      <div class="testimonials__reviews">
+        <div class="testimonials__reviews__card">
+          <div class="testimonials__reviews__card--info">
+            <div class="testimonials__reviews__card--icon">"</div>
+            <div class="testimonials__reviews__card--img">
+              <img src="src/img/client1.png" alt="person" />
+            </div>
+            <div class="testimonials__reviews__card--name">
+              <p>David Anderson</p>
+            </div>
+          </div>
+          <div class="testimonials__reviews__card--text">
+            <p>
+              "The rental process was seamless, and the motorcycle I got was in
+              pristine condition. I had an incredible journey, thanks to their
+              reliable service."
+            </p>
+          </div>
+        </div>
+        <div class="testimonials__reviews__card">
+          <div class="testimonials__reviews__card--info">
+            <div class="testimonials__reviews__card--icon">"</div>
+            <div class="testimonials__reviews__card--img">
+              <img src="src/img/client2.png" alt="person" />
+            </div>
+            <div class="testimonials__reviews__card--name">
+              <p>John Smith</p>
+            </div>
+          </div>
+          <div class="testimonials__reviews__card--text">
+            <p>
+              "I can't recommend this motorcycle rental company enough! The
+              staff was friendly, the bikes were top-notch, and I had the time
+              of my life exploring scenic routes."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="faq__content">
+        <h1 class="faq__title">Frequently Asked Questions (FAQ)</h1>
+        <p class="faq__sub-title">
+          Frequently Asked Questions About the Car Rental Booking Process on Our
+          Website: Answers to Common Concerns and Inquiries.
+        </p>
+      </div>
+      <div class="faq__all-questions">
+        <div class="faq-box__question active--question">
+          <p>
+            What happens if I return the motorcycle late?
+            <svg class="arrow-down__icon">
+              <use xlink:href="src/img/sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+          </p>
+        </div>
+        <div class="faq-box__answer active--answer">
+          <p>
+            We understand that unforeseen circumstances may arise. If you
+            anticipate being late, please notify us as soon as possible. Late
+            returns may be subject to additional charges, depending on the
+            duration of the delay. Contact our customer support for more
+            information and to discuss any potential late return situations.
+          </p>
+        </div>
+        <div class="faq-box__question">
+          <p>
+            What happens if I return the motorcycle late?
+            <svg class="arrow-down__icon">
+              <use xlink:href="src/img/sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+          </p>
+        </div>
+        <div class="faq-box__answer">
+          <p>
+            We understand that unforeseen circumstances may arise. If you
+            anticipate being late, please notify us as soon as possible. Late
+            returns may be subject to additional charges, depending on the
+            duration of the delay. Contact our customer support for more
+            information and to discuss any potential late return situations.
+          </p>
+        </div>
+        <div class="faq-box__question">
+          <p>
+            What happens if I return the motorcycle late?
+            <svg class="arrow-down__icon">
+              <use xlink:href="src/img/sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+          </p>
+        </div>
+        <div class="faq-box__answer">
+          <p>
+            We understand that unforeseen circumstances may arise. If you
+            anticipate being late, please notify us as soon as possible. Late
+            returns may be subject to additional charges, depending on the
+            duration of the delay. Contact our customer support for more
+            information and to discuss any potential late return situations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="info">
+      <div class="info__content">
+        <pre class="info__title">
+Experience the 
+Ultimate Convenience 
+Download Our
+App Today</pre
+        >
+        <pre class="info__sub-title">
+Welcome to our motorcycle rental website,
+where we offer an exceptional riding 
+experience tailored to your convenience. 
+Discover the easiest and most efficient 
+way to rent a motorcycle by downloading 
+our dedicated app today
+          </pre
+        >
+        <div class="app--store">
+          <img src="./src/img/appstore.png" alt="img" />
+          <img src="./src/img/googleplay.png" alt="img" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <ul class="footer__content-1">
+          <li>BIKE<span>SEWA</span></li>
+          <li>
+            <p>
+              Experience the thrill of motorcycle travel, create lasting
+              memories, and let the freedom of two wheels be your guide.
+            </p>
+          </li>
+          <li>
+            <a
+              href="tel:+9779812047648"
+              class="footer__contacts__icon footer__contacts--no"
+            >
+              <svg class="footer__icon svg">
+                <use xlink:href="src/img/sprite.svg#icon-phone"></use>
+              </svg>
+              (+977)9812047648</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:bikeswa@gmail.com"
+              class="footer__contacts__icon footer__contacts--mail"
+            >
+              <svg class="footer__icon svg">
+                <use xlink:href="src/img/sprite.svg#icon-mail"></use>
+              </svg>
+              bikeswa@gmail.com</a
+            >
+          </li>
+          <li>
+            <p>Design and developed by Madan Budhathoki</p>
+          </li>
+        </ul>
+        <ul class="footer__content-2">
+          <li>
+            <p>Information</p>
+          </li>
+          <li>
+            <a href="#"> ABOUT US </a>
+          </li>
+          <li>
+            <a href="#"> CONTACT US </a>
+          </li>
+          <li>
+            <a href="#"> SERVICES </a>
+          </li>
+          <li>
+            <a href="#"> PRIVACY & POLICY </a>
+          </li>
+        </ul>
+        <ul class="footer__content-3">
+          <li>SUBSCRIPTION</li>
+          <li>SUBSCRIBE YOUR EMAIL ADDRESS FOR LATEST NEWS & UPDATES</li>
+          <li>
+            <input type="email" placeholder="Enter Your Email" />
+          </li>
+          <li>
+            <input type="submit" value="SUBMIT" />
+          </li>
+        </ul>
+      </div>
+      <div class="developer">
+        <svg class="developer__icon svg">
+          <use xlink:href="src/img/sprite.svg#icon-copyright"></use>
+        </svg>
+        <p>2023 BIKESEWA. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+<!-- "prefix": "postcss src/css/style.css --use autoprefixer -d src/css/prefix/", -->

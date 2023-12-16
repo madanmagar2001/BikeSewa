@@ -1,0 +1,138 @@
+@use "../abstract" as *;
+
+.sub-page {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+
+  @include smalldevice;
+  @include responsive(desktop) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.container {
+  .page__nav {
+    margin-top: 3.2rem;
+    margin-bottom: 9.6rem;
+    color: var(--color-grey-dark-2);
+    h3 {
+      font-size: 2.4rem;
+    }
+    p {
+      margin-top: 0.8rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+    a {
+      transition: 0.4s ease;
+    }
+    a:hover {
+      color: var(--color-red-light-1);
+      transition: 0.4s ease;
+    }
+  }
+
+  .container__about {
+    // margin-top: 4.8rem;
+    color: var(--color-grey-dark-2);
+    h1 {
+      font-size: 3.2rem;
+      text-align: center;
+    }
+
+    .about-main {
+      margin-top: 2.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+
+      @include responsive(tab) {
+        flex-direction: row;
+      }
+
+      .about-main__img {
+
+        @include responsive(tab) {
+          width: 50%;
+        }
+      }
+
+      .about-main__text {
+        font-size: 1.4rem;
+
+        @include responsive(tab) {
+          width: 50%;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .container__story {
+    margin-top: 9.6rem;
+
+    h2 {
+      font-size: 2.4rem;
+      text-align: center;
+    }
+    p {
+      margin-top: 2.4rem;
+      font-size: 1.4rem;
+
+      @include responsive(tab) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.container__booking {
+  // margin-top: 4.8rem;
+  margin-top: 9.6rem;
+  background-image: url(../img/booking-banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.514);
+  padding: 2rem;
+  
+  @include responsive(tab) {
+    padding: 4rem;
+  }
+  
+  p {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-white);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .8rem;
+
+    @include responsive(tab) {
+      font-size: 3.2rem;
+      gap: 1.6rem;
+    }
+  }
+
+  p span {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-red-light-1);
+    gap: .4rem;
+  }
+
+  p svg {
+    fill: var(--color-red-light-1);
+
+    @include responsive(tab) {
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+  }
+}

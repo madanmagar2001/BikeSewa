@@ -1,0 +1,141 @@
+@use "../abstract" as *;
+@use "../components" as *;
+.bikes {
+  @include smalldevice;
+
+  @include responsive(desktop) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  margin-top: 9.6rem;
+  &__content {
+    text-align: center;
+    .bikes__title {
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: var(--color-grey-dark-2);
+    }
+    .bikes__sub-title {
+      font-size: 3.2rem;
+      font-weight: 500;
+
+      @include responsive(l-tab) {
+        font-size: 4.2rem;
+      }
+    }
+    .bikes__discription {
+      margin-top: 1.2rem;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      color: var(--color-grey-dark-1);
+
+      @include responsive(tab) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .bikes__models {
+    margin-top: 4.8rem;
+    text-align: left;
+
+    @include responsive(tab) {
+      text-align: left;
+      display: grid;
+      justify-content: space-between;
+      align-items: center;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "model model"
+        "bike features";
+    }
+
+    @include responsive(l-tab) {
+      grid-template-rows: 1fr;
+      grid-template-areas: "model bike features";
+    }
+    .bikes__brand {
+      font-size: 2rem;
+
+      @include responsive(tab) {
+        grid-area: model;
+      }
+      &__item {
+        cursor: pointer;
+        background-color: var(--color-grey-light);
+        color: var(--color-grey-dark-2);
+        padding: 0.5em 1em;
+        transition: .2s;
+      }
+
+      &__item:hover {
+        color: var(--color-white);
+        background-color: var(--color-red-light-1);
+      }
+
+      &__item:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .submit__btn:hover {
+      @include hover;
+    }
+    
+    .submit__btn {
+      @include submit__btn;
+      font-size: 1.6rem;
+      width: 100%;
+      transition: .4s ease;
+
+      @include responsive(tab) {
+        font-size: 2.4rem;
+      }
+    }
+    // Active item
+    .bikes__brand__item--active {
+      @include activeItem;
+    }
+    .bikes__img {
+      margin: 4.8rem 0;
+      padding: 1rem;
+      position: relative;
+      @include responsive(tab) {
+        grid-area: bike;
+        max-width: 50rem;
+      }
+    }
+    .bikes__features {
+      @include responsive(tab) {
+        grid-area: features;
+      }
+      .bikes__price {
+        font-size: 2rem;
+        padding: 0.5em 1em;
+        @include activeItem;
+        span {
+          font-size: 2.4rem;
+        }
+      }
+      .bikes__features__col {
+        display: flex;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        background-color: var(--color-white);
+        color: var(--color-grey-dark-2);
+        font-size: 1.4rem;
+        padding: 0.5em 1em;
+        & span:first-of-type {
+          border-right: 1px solid black;
+          text-align: left;
+          width: 50%;
+        }
+        & span:last-of-type {
+          width: 50%;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
